@@ -85,5 +85,5 @@ def admin():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5001))  # Port par défaut 5000 si non spécifié
+    port = int(os.environ.get("PORT", 5000))  # Port par défaut 5000 si non spécifié
     app.run(host="0.0.0.0", port=port)
