@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Questions en attente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Administration des Questions/Réponses</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Question</th>
+                    <th>Réponse</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for qna in temp_qna %}
+                <tr>
+                    <td>{{ qna[0] }}</td>
+                    <td>{{ qna[1] }}</td>
+                    <td>{{ qna[2] }}</td>
+                    <td>
+                        <form method="POST">
+                            <input type="hidden" name="qna_id" value="{{ qna[0] }}">
+                            <button type="submit" name="action" value="validate">Valider</button>
+                            <button type="submit" name="action" value="delete">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #5e0a0a;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #5e0a0a;
+    color: white;
+}
+
+td button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #5e0a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #5e0a0a;
+}

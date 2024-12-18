@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Juridique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chatbot Juridique IA</h1>
+            <p>Posez vos questions sur le règlement de l'IA (AI Act)</p>
+        </header>
+
+        <div id="chatbox">
+            <div id="messages"></div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Tapez votre question ici...">
+            <button id="send-btn">Envoyer</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
